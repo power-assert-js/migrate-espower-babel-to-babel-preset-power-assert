@@ -1,4 +1,4 @@
-# migrate-espower-babel-to-babel-plugin-espower
+# migrate-espower-babel-to-babel-preset-power-assert
 
 Migrate [espower-babel](https://github.com/power-assert-js/espower-babel "espower-babel") to [babel-plugin-espower](https://github.com/power-assert-js/babel-plugin-espower "babel-plugin-espower").
 
@@ -10,13 +10,13 @@ Migrate [espower-babel](https://github.com/power-assert-js/espower-babel "espowe
 
 ## Installation
 
-    npm install -g migrate-espower-babel-to-babel-plugin-espower
+    npm install -g migrate-espower-babel-to-babel-preset-power-assert
 
 ## Usage
 
 ```sh
 $ cd project-root-dir/
-$ migrate-espower-babel-to-babel-plugin-espower
+$ migrate-espower-babel-to-babel-preset-power-assert
 
 Run: npm uninstall -D espower-babel
 Run: npm install -D babel-preset-power-assert

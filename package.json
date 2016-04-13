@@ -1,12 +1,12 @@
 {
-  "name": "migrate-espower-babel-to-babel-plugin-espower",
+  "name": "migrate-espower-babel-to-babel-preset-power-assert",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/azu/migrate-espower-babel-to-babel-plugin-espower.git"
+    "url": "git+https://github.com/power-assert-js/migrate-espower-babel-to-babel-preset-power-assert.git"
   },
   "author": "azu",
   "email": "azuciao@gmail.com",
-  "homepage": "https://github.com/azu/migrate-espower-babel-to-babel-plugin-espower",
+  "homepage": "https://github.com/power-assert-js/migrate-espower-babel-to-babel-preset-power-assert",
   "license": "MIT",
   "files": [
     "bin/",
@@ -14,13 +14,13 @@
     "lib/"
   ],
   "bugs": {
-    "url": "https://github.com/azu/migrate-espower-babel-to-babel-plugin-espower/issues"
+    "url": "https://github.com/power-assert-js/migrate-espower-babel-to-babel-preset-power-assert/issues"
   },
   "version": "1.0.1",
   "description": "migration tool for espower-babel.",
   "main": "bin/cmd.js",
   "bin": {
-    "migrate-espower-babel-to-babel-plugin-espower": "bin/cmd.js"
+    "migrate-espower-babel-to-babel-preset-power-assert": "bin/cmd.js"
   },
   "directories": {
     "test": "test"
