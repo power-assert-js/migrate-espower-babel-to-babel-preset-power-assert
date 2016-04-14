@@ -1,73 +1,70 @@
-# migrate-espower-babel-to-babel-plugin-espower
+# migrate-espower-babel-to-babel-preset-power-assert
 
-Migrate [espower-babel](https://github.com/power-assert-js/espower-babel "espower-babel") to [babel-plugin-espower](https://github.com/power-assert-js/babel-plugin-espower "babel-plugin-espower").
+Migrate [espower-babel](https://github.com/power-assert-js/espower-babel "espower-babel") to [babel-preset-power-assert](https://github.com/power-assert-js/babel-preset-power-assert "babel-preset-power-assert").
+
+## Target User
+
+- Using `espower-babel`
+- Having `test/mocha.opts`
+- Using Babel >= 6
 
 ## Installation
 
-    npm install -g migrate-espower-babel-to-babel-plugin-espower
+    npm install -g migrate-espower-babel-to-babel-preset-power-assert
 
 ## Usage
 
 ```sh
-$ migrate-espower-babel-to-babel-plugin-espower
+$ cd project-root-dir/
+$ migrate-espower-babel-to-babel-preset-power-assert
 
 Run: npm uninstall -D espower-babel
-Run: npm install -D babel-plugin-espower
+Run: npm install -D babel-preset-power-assert
 Run: npm install -D babel-register
 rewrite mocha.opts
 rewrite .babelrc
 ```
 
+### Before
+
+- using espower-babel
+
+### After
+
+- using babel-register
+- using babel-preset-power-assert
+
 ## Example
 
 ```diff
 diff --git a/.babelrc b/.babelrc
-index 7e841ee..ce17a67 100644
+index ba2a650..e7e1682 100644
 --- a/.babelrc
 +++ b/.babelrc
-@@ -1,4 +1,15 @@
- {
--    "presets": ["es2015"],
--    "plugins": ["add-module-exports"]
-+  "presets": [
-+    "es2015"
-+  ],
-+  "plugins": [
-+    "add-module-exports"
-+  ],
-+  "env": {
-+    "development": {
-+      "plugins": [
-+        "babel-plugin-espower"
-+      ]
-+    }
-+  }
- }
-\ No newline at end of file
+@@ -6,6 +6,9 @@
+     "development": {
+       "plugins": [
+         "jsdoc-to-assert"
++      ],
++      "presets": [
++        "power-assert"
+       ]
+     }
+   }
 diff --git a/package.json b/package.json
-index 7532cda..ba7ebbb 100644
+index ebafaf5..e5e1216 100644
 --- a/package.json
 +++ b/package.json
-@@ -26,7 +26,7 @@
-     "test": "test"
-   },
-   "scripts": {
--    "build": "babel src --out-dir lib --source-maps",
-+    "build": "NODE_ENV=production babel src --out-dir lib --source-maps",
-     "watch": "babel src --out-dir lib --watch --source-maps",
-     "prepublish": "npm run --if-present build",
-     "test": "mocha"
-@@ -38,8 +38,9 @@
-   "devDependencies": {
-     "babel-cli": "^6.4.0",
-     "babel-plugin-add-module-exports": "^0.1.3-alpha",
-+    "babel-plugin-espower": "^2.1.2",
-     "babel-preset-es2015": "^6.3.13",
+@@ -24,7 +24,8 @@
+     "babel-plugin-add-module-exports": "^0.1.2",
+     "babel-plugin-jsdoc-to-assert": "^1.4.0",
+     "babel-preset-es2015": "^6.6.0",
 -    "espower-babel": "^4.0.1",
++    "babel-preset-power-assert": "^1.0.0",
 +    "babel-register": "^6.7.2",
-     "mocha": "^2.3.4",
-     "power-assert": "^1.2.0"
-   },
+     "espower-loader": "^1.0.0",
+     "mocha": "^2.2.1",
+     "power-assert": "^1.0.0",
 diff --git a/test/mocha.opts b/test/mocha.opts
 index 8d0282d..b76d223 100644
 --- a/test/mocha.opts
@@ -81,7 +78,7 @@ index 8d0282d..b76d223 100644
 
 See real commit:
 
-- [chore(test): use babel-plugin-espower directly by azu · Pull Request #1 · azu/es-usage-rate](https://github.com/azu/es-usage-rate/pull/1/commits/e581cd5f2b87204aff889bc7c4db8b419d799922 "chore(test): use babel-plugin-espower directly by azu · Pull Request #1 · azu/es-usage-rate")
+- [chore(npm): use babel-preset-power-assert by azu · Pull Request #25 · azu/material-flux](https://github.com/azu/material-flux/pull/25 "chore(npm): use babel-preset-power-assert by azu · Pull Request #25 · azu/material-flux")
 
 ## Contributing
 
