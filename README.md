@@ -1,8 +1,8 @@
 # migrate-espower-babel-to-babel-preset-power-assert
 
-Migrate [espower-babel](https://github.com/power-assert-js/espower-babel "espower-babel") to [babel-plugin-espower](https://github.com/power-assert-js/babel-plugin-espower "babel-plugin-espower").
+Migrate [espower-babel](https://github.com/power-assert-js/espower-babel "espower-babel") to [babel-preset-power-assert](https://github.com/power-assert-js/babel-preset-power-assert "babel-preset-power-assert").
 
-## Use conditions
+## Target User
 
 - Using `espower-babel`
 - Having `test/mocha.opts`
