@@ -24,6 +24,7 @@ const babelrc = existBabelRC ? JSON.parse(fs.readFileSync(babelrcPath, "utf-8"))
 const mochaOpt = fs.readFileSync(mochaOptPath, "utf-8");
 // install devDependencies
 exec('npm uninstall --save-dev espower-babel');
+exec('npm install --save-dev power-assert');
 exec('npm install --save-dev babel-preset-power-assert');
 exec('npm install --save-dev babel-register');
 // replace exist config

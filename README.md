@@ -19,6 +19,7 @@ $ cd project-root-dir/
 $ migrate-espower-babel-to-babel-preset-power-assert
 
 Run: npm uninstall -D espower-babel
+Run: npm install -D power-assert
 Run: npm install -D babel-preset-power-assert
 Run: npm install -D babel-register
 rewrite mocha.opts
