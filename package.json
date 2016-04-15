@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/power-assert-js/migrate-espower-babel-to-babel-preset-power-assert/issues"
   },
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "migration tool for espower-babel.",
   "main": "bin/cmd.js",
   "bin": {
