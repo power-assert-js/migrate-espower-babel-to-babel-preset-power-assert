@@ -80,6 +80,7 @@ index 8d0282d..b76d223 100644
 See real commit:
 
 - [chore(npm): use babel-preset-power-assert by azu · Pull Request #25 · azu/material-flux](https://github.com/azu/material-flux/pull/25 "chore(npm): use babel-preset-power-assert by azu · Pull Request #25 · azu/material-flux")
+- [chore(test): use power-assert preset · azu/match-index@f4f6df8](https://github.com/azu/match-index/commit/f4f6df88ae39a2eb8eab0a13e121f27305085aa3 "chore(test): use power-assert preset · azu/match-index@f4f6df8")
 
 ## Contributing
 
